@@ -1,0 +1,5 @@
+<% @albums.each do |album| %>
+	<%= image_tag album.cover %>
+	<h2><%= album.title %></h2>
+	<h3><%= album.artist %></h3>
+<% end %>
