@@ -1,5 +1,14 @@
-<% @albums.each do |album| %>
-	<%= image_tag album.cover %>
-	<h2><%= album.title %></h2>
-	<h3><%= album.artist %></h3>
-<% end %>
+<!-- 
+Something wrong with this loop. Keeps generating way too many html elements for each piece of data
+for ex: there is like 10 image tags and "see track" links for one each album 
+
+Going to learn more html and refresh myself in erb and come back to re write this to work
+-->
+
+	<% @albums.each do |album| %>
+		<%= image_tag album.cover %>
+		<%= album.title %>
+		<%= album.artist %>
+		<%= link_to "See Tracks", album_path(album) %>
+		<div>
+	<% end %>

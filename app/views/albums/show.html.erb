@@ -1,0 +1,10 @@
+<!-- code is still not quite right -->
+
+<%= image_tag @album.cover %>
+<%= @album.title %>
+<%= @album.artist %>
+
+<% @tracks.each do |track| %>
+	<%= track.name %>
+	<%= track.minutes %>
+<% end %>

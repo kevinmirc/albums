@@ -3,6 +3,7 @@ class CreateTracks < ActiveRecord::Migration
     create_table :tracks do |t|
       t.string :name
       t.string :minutes
+      t.references :album
       t.timestamps
     end
   end
